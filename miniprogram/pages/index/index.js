@@ -7,7 +7,8 @@ Page({
     userInfo: {},
     logged: false,
     takeSession: false,
-    requestResult: ''
+    requestResult: '',
+    msList:[]
   },
 
   onLoad: function() {
@@ -17,23 +18,7 @@ Page({
       })
       return
     }
-
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              this.setData({
-                avatarUrl: res.userInfo.avatarUrl,
-                userInfo: res.userInfo
-              })
-            }
-          })
-        }
-      }
-    })
+    this.getMsList()
   },
 
   onGetUserInfo: function(e) {
@@ -116,5 +101,15 @@ Page({
       }
     })
   },
-
+  getMsList(){
+     wx.request({
+       url: 'http://127.0.0.1:7001/minapp/seckill/list',
+       method:'GET',
+       success:(res)=>{
+          this.setData({
+            msList:res.data.results
+          })
+       }
+     })
+  }
 })

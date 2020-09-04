@@ -310,7 +310,7 @@ Component({
       try {
         await fn()
       } catch (e) {
-        this.showError(title, e)
+        this.showError(title, e,'cw')
       }
     },
 

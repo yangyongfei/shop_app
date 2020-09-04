@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/im/im",
+    "pages/kind/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
@@ -11,12 +13,15 @@
     "pages/openapi/serverapi/serverapi",
     "pages/openapi/callback/callback",
     "pages/openapi/cloudid/cloudid",
-    "pages/im/im",
-    "pages/im/room/room",
     "pages/my/my",
     "pages/shoppingCart/shoppingCart",
-    "pages/classification/classification"
+    "pages/classification/classification",
+    "pages/detail/index"
   ],
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-field": "@vant/weapp/field/index"
+  },
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
@@ -24,6 +29,37 @@
     "navigationBarTitleText": "融兴生鲜",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#e64340",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/shouye.png",
+        "selectedIconPath": "images/shouyeh.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/kind/index",
+        "iconPath": "images/fenlei.png",
+        "selectedIconPath": "images/fenleih.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/shoppingCart/shoppingCart",
+        "iconPath": "images/icon4.png",
+        "selectedIconPath": "images/icon4h.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/wode.png",
+        "selectedIconPath": "images/wodeh.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
 }
