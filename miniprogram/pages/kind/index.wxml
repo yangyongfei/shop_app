@@ -1,2 +1,7 @@
 <!--miniprogram/pages/kind/index.wxml-->
-<text>miniprogram/pages/kind/index.wxml</text>
+<view class="kind">
+  <view class="kind-left">
+    <view class="item {{index==navIndex ? 'active' :''}}"  wx:for="{{kind}}">{{item.name}}</view>
+  </view>
+  <view class="kind-right"></view>
+</view>

@@ -5,7 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+      kind:[
+        {name:'新鲜蔬菜',id:1},
+        {name:'时令水果',id:2},
+        {name:'新鲜蔬菜',id:3},
+        {name:'新鲜蔬菜',id:4},
+        {name:'新鲜蔬菜',id:5}
+      ],
+      navIndex:0,
   },
 
   /**
